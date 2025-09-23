@@ -1,0 +1,78 @@
+.pokedexHeader {
+    background-color: #d12a33; /* Vermelho principal da Pokédex */
+    padding: 15px 20px;
+    border-bottom: 5px solid #a82027;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 98%;
+}
+
+.pokedexTop {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.pokedexLensContainer {
+    background-color: #ffffff;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #333;
+}
+
+.pokedexLens {
+    width: 65px;
+    height: 65px;
+    background: radial-gradient(circle at 30% 30%, #8ec5fc, #3a98d4);
+    border-radius: 50%;
+    border: 4px solid #2c76a5;
+    position: relative;
+    overflow: hidden;
+}
+
+.lensHighlight {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 25px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    transform: rotate(-30deg);
+}
+
+.pokedexLights {
+    display: flex;
+    gap: 15px;
+}
+
+.light {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    box-shadow: inset 0 -2px 3px rgba(0,0,0,0.4);
+}
+
+.red {
+    background-color: #ff4141;
+}
+
+.yellow {
+    background-color: #ffde59;
+}
+
+.green {
+    background-color: #7bed7b;
+}
+
+.pokedexBottomLine {
+    height: 8px;
+    background-color: #a82027;
+    margin-top: 15px;
+    border-top: 2px solid #333;
+    border-radius: 2px;
+}

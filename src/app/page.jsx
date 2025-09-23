@@ -4,6 +4,9 @@ import styles from "./page.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Pagination } from "antd";
+import Header from "@/components/Header/Header";
+import Image from "next/image";
+import Card from "@/components/Card/Card";
 
 const HEADERS = {'x-api-key': process.env.NEXT_PUBLIC_API_KEY}
 
@@ -12,7 +15,7 @@ export default function Home() {
     pokemons: [],
     loading: true,
     current: 1,
-    pageSize: 10, // valor padrão para paginação
+    pageSize: 9, // valor padrão para paginação
   });
   
   useEffect(() => {
@@ -43,6 +46,7 @@ export default function Home() {
   return (
     
     <div className={styles.container}>
+      <Header />
       <Pagination
         current={data.current}
         pageSize={data.pageSize || 10}
@@ -58,13 +62,7 @@ export default function Home() {
           <p>Carregando...</p>
         ) : (
           paginatedPokemons().map((pokemon) => (
-            <div key={pokemon.id} className={styles.cardItem}>
-              <p>{pokemon.name}</p>
-              <p>{pokemon.height}</p>
-              <p>{pokemon.weight}</p>
-              <p>{pokemon.evolves_from_species}</p>
-              <p>{pokemon.evolves_to_species}</p>
-            </div>
+            <Card key={pokemon.id} pokemon={pokemon} />
           ))
         )}
       </div>

@@ -1,0 +1,20 @@
+export const typeColors = {
+  normal: '#A8A77A',
+  fogo: '#EE8130',
+  agua: '#6390F0',
+  eletrico: '#F7D02C',
+  grama: '#7AC74C',
+  gelo: '#96D9D6',
+  lutador: '#C22E28',
+  venenoso: '#A33EA1',
+  terra: '#E2BF65',
+  voador: '#A98FF3',
+  psiquico: '#F95587',
+  inseto: '#A6B91A',
+  pedra: '#B6A136',
+  fantasma: '#735797',
+  dragao: '#6F35FC',
+  dark: '#705746', // Mantive alguns em inglês que não têm tradução comum
+  aço: '#B7B7CE',
+  fada: '#D685AD',
+};
