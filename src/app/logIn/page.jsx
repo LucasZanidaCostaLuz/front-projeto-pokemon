@@ -40,7 +40,7 @@ export default function Login() {
             setLoading(false); 
 
             setTimeout(() => {
-                router.push('/Pokedex'); 
+                router.push('/pokedex'); 
             }, 1000);
 
         } catch (error) {

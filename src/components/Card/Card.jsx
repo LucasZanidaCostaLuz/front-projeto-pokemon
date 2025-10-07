@@ -16,7 +16,7 @@ export default function DetailedPokemonCard({ pokemon }) {
   const router = useRouter();
 
   const handleCardClick = () => {
-    router.push(`/Pokedex/${pokemon.id}`);
+    router.push(`/pokedex/${pokemon.id}`);
   }
 
   return (
@@ -54,10 +54,11 @@ export default function DetailedPokemonCard({ pokemon }) {
           <span className={styles.statValue}>{(pokemon.height / 10).toFixed(1)} m</span>
           <span className={styles.statLabel}>Altura</span>
         </div>
-      </div>
-      <button className={styles.detailsButton} onClick={handleCardClick}>
+        <button className={styles.detailsButton} onClick={handleCardClick}>
         Detalhes
       </button>
+      </div>
+      
     </div>
   );
 };

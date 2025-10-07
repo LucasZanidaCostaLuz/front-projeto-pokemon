@@ -1,0 +1,86 @@
+.page {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}   
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #cacaca25;
+    border: #acabab5b solid 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-items: center;
+}
+
+.nome {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.span {
+    color: #ff0000;
+}
+
+.description {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.height {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.weight {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.image {
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.numero {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.types, .abilities, .stats {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.type_text, .abilities_text, .stats_text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.stats li {
+    margin-bottom: 5px;
+}
+
+.stats_text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 20px;
+}

@@ -1,78 +1,79 @@
-.pokedexHeader {
-    background-color: #d12a33; 
-    padding: 15px 20px;
-    border-bottom: 5px solid #a82027;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    width: 98%;
-}
-
-.pokedexTop {
+.headerContainer {
+    background-color: #ef5350; 
+    height: 15vh; 
+    width: 100%;
+    position: relative; 
+    border-bottom: 5px solid #212121; 
+    overflow: hidden; 
+    margin-bottom: 1rem;
+    z-index: 9;
     display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.pokedexLensContainer {
-    background-color: #ffffff;
-    width: 80px;
-    height: 80px;
+    justify-content: center;
+    align-items: flex-start; 
+    padding-top: 1rem;
+  }
+  
+  .pokeballButton {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -72px; 
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
     border-radius: 50%;
+    border: 5px solid #212121;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px solid #333;
-}
-
-.pokedexLens {
-    width: 65px;
-    height: 65px;
-    background: radial-gradient(circle at 30% 30%, #8ec5fc, #3a98d4);
-    border-radius: 50%;
-    border: 4px solid #2c76a5;
-    position: relative;
-    overflow: hidden;
-}
-
-.lensHighlight {
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    width: 25px;
-    height: 15px;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 50%;
-    transform: rotate(-30deg);
-}
-
-.pokedexLights {
+  }
+  
+  .pokeballInnerCircle {
     display: flex;
-    gap: 15px;
-}
-
-.light {
-    width: 20px;
-    height: 20px;
+    text-align: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
     border-radius: 50%;
-    border: 2px solid #333;
-    box-shadow: inset 0 -2px 3px rgba(0,0,0,0.4);
-}
+    border: 3px solid #212121;
+    z-index: 10;
+    cursor: pointer;
+  }
 
-.red {
-    background-color: #ff4141;
-}
+  .pokeballInnerCircle:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
 
-.yellow {
-    background-color: #ffde59;
-}
-
-.green {
-    background-color: #7bed7b;
-}
-
-.pokedexBottomLine {
-    height: 8px;
-    background-color: #a82027;
-    margin-top: 15px;
-    border-top: 2px solid #333;
-    border-radius: 2px;
-}
+  .perfil{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: #fff;
+    justify-content: center;
+    margin-right: 5px;
+    text-align: center;
+    color: red;
+  }
+  
+  @media (max-width: 600px) {
+    .headerContainer {
+      height: 70px;
+      border-bottom-width: 10px;
+    }
+  
+    .pokeballButton {
+      width: 100px;
+      height: 100px;
+      border-width: 10px;
+      bottom: -60px; 
+    }
+  
+    .pokeballInnerCircle {
+      width: 50px;
+      height: 50px;
+      border-width: 6px;
+    }
+  }

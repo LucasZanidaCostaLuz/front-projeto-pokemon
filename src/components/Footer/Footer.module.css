@@ -1,0 +1,67 @@
+.footerContainer {
+    background-color: #ffffff;
+    height: 10vh;
+    width: 100%;
+    position: relative;
+    border-top: 5px solid #212121; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; 
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .pokeballButton {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -72px; 
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 5px solid #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pokeballInnerCircle {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 5px solid #212121;
+  }
+  
+  .footerContent {
+    color: #555;
+    font-size: 0.9rem;
+    position: relative; 
+    z-index: 10;
+  }
+  
+  @media (max-width: 600px) {
+    .footerContainer {
+      height: 70px;
+      border-top-width: 10px;
+    }
+  
+    .pokeballButton {
+      width: 100px;
+      height: 100px;
+      border-width: 10px;
+      top: -60px;
+    }
+  
+    .pokeballInnerCircle {
+      width: 50px;
+      height: 50px;
+      border-width: 6px;
+    }
+  
+    .footerContent {
+      font-size: 0.8rem;
+    }
+  }

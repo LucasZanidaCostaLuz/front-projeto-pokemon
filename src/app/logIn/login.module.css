@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #cacaca25;
+    border: #acabab5b solid 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-items: center;
+}
+
+.loginContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    background-color: #0000001c;
+    border-radius: 10px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    background-color: #0000001c;
+    border-radius: 10px;
+}
+
+.entrar{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 250px;
+}

@@ -79,3 +79,13 @@
   font-size: 0.8rem;
   opacity: 0.9;
 }
+
+.detailsButton{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #555;
+  border-radius: 20px;
+}

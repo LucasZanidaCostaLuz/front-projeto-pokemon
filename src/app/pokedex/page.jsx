@@ -1,11 +1,12 @@
 "use client";
 
-import styles from "./page.module.css";
+import styles from "./pokedex.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Pagination } from "antd";
 import Header from "@/components/Header/Header";
 import Card from "@/components/Card/Card";
+import Footer from "@/components/Footer/Footer";
 
 const HEADERS = {'x-api-key': process.env.NEXT_PUBLIC_API_KEY}
 
@@ -65,6 +66,7 @@ export default function Home() {
           ))
         )}
       </div>
+      <Footer />
     </div>
   );
 }

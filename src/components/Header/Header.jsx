@@ -1,22 +1,24 @@
+import styles from './Header.module.css';
 import React from 'react';
-import styles from './Header.module.css'; 
+import { useRouter } from 'next/navigation';
 
 export default function Header (){
+  const router = useRouter();
+
+  const handleLogoClick = () => {
+    router.push('/perfil');
+  }
+
   return (
-    <header className={styles.pokedexHeader}>
-      <div className={styles.pokedexTop}>
-        <div className={styles.pokedexLensContainer}>
-          <div className={styles.pokedexLens}>
-            <div className={styles.lensHighlight}></div>
-          </div>
-        </div>
-        <div className={styles.pokedexLights}>
-          <div className={`${styles.light} ${styles.red}`}></div>
-          <div className={`${styles.light} ${styles.yellow}`}></div>
-          <div className={`${styles.light} ${styles.green}`}></div>
+    <header className={styles.headerContainer}>
+      <div className={styles.pokeballButton}>
+        <div className={styles.pokeballInnerCircle} onClick={handleLogoClick}>
+          <button className={styles.perfil} >
+            Perfil
+          </button>
         </div>
       </div>
-      <div className={styles.pokedexBottomLine}></div>
+      
     </header>
   );
 };
