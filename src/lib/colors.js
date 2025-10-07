@@ -14,7 +14,7 @@ export const typeColors = {
   pedra: '#B6A136',
   fantasma: '#735797',
   dragao: '#6F35FC',
-  dark: '#705746', // Mantive alguns em inglês que não têm tradução comum
+  dark: '#705746', 
   aço: '#B7B7CE',
   fada: '#D685AD',
 };

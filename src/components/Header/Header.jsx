@@ -1,7 +1,5 @@
-// components/PokedexHeader/PokedexHeader.js
-
 import React from 'react';
-import styles from './Header.module.css'; // Importando os estilos do nosso módulo CSS
+import styles from './Header.module.css'; 
 
 export default function Header (){
   return (

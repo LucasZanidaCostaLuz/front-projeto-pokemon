@@ -1,23 +1,28 @@
 import Image from 'next/image';
-import styles from './Card.module.css'; // Verifique se o nome do arquivo CSS está correto
+import styles from './Card.module.css';
 import { typeColors } from '../../lib/colors';
+import React from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function DetailedPokemonCard({ pokemon }) {
-  // Adiciona uma "guarda" para evitar erros se os dados ainda não chegaram
   if (!pokemon) {
-    return null; // Ou um componente de loading
+    return null;
   }
 
-  // CORRIGIDO: Acessa o primeiro tipo diretamente do array de strings
   const mainType = pokemon.types?.[0] || 'normal';
   const cardColor = typeColors[mainType];
   const cardGradient = `linear-gradient(135deg, ${cardColor} 50%, #f0f0f0 50%)`;
+
+  const router = useRouter();
+
+  const handleCardClick = () => {
+    router.push(`/Pokedex/${pokemon.id}`);
+  }
 
   return (
     <div className={styles.card} style={{ borderColor: cardColor }}>
       <div className={styles.cardHeader} style={{ background: cardGradient }}>
         <h2 className={styles.name}>{pokemon.name}</h2>
-        {/* CORRIGIDO: Acessa o HP diretamente do objeto 'stats' */}
         <span className={styles.hp}>HP {pokemon.stats?.hp}</span>
       </div>
       <div className={styles.imageContainer}>
@@ -30,14 +35,13 @@ export default function DetailedPokemonCard({ pokemon }) {
         />
       </div>
       <div className={styles.typesContainer}>
-        {/* CORRIGIDO: Mapeia o array de strings diretamente */}
         {pokemon.types?.map((typeName) => (
           <span 
-            key={typeName} // CORRIGIDO
+            key={typeName} 
             className={styles.typeBadge} 
-            style={{ backgroundColor: typeColors[typeName] }} // CORRIGIDO
+            style={{ backgroundColor: typeColors[typeName] }} 
           >
-            {typeName} {/* CORRIGIDO */}
+            {typeName}
           </span>
         ))}
       </div>
@@ -51,6 +55,9 @@ export default function DetailedPokemonCard({ pokemon }) {
           <span className={styles.statLabel}>Altura</span>
         </div>
       </div>
+      <button className={styles.detailsButton} onClick={handleCardClick}>
+        Detalhes
+      </button>
     </div>
   );
 };

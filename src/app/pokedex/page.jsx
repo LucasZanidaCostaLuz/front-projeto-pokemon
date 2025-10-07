@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Pagination } from "antd";
 import Header from "@/components/Header/Header";
-import Image from "next/image";
 import Card from "@/components/Card/Card";
 
 const HEADERS = {'x-api-key': process.env.NEXT_PUBLIC_API_KEY}
@@ -15,7 +14,7 @@ export default function Home() {
     pokemons: [],
     loading: true,
     current: 1,
-    pageSize: 9, // valor padrão para paginação
+    pageSize: 9,
   });
   
   useEffect(() => {
