@@ -90,7 +90,7 @@ export default function Perfil() {
                 const payload = parseJwt(token);
                 const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/teams`, {
                     team_name: form.team_name.trim(),
-                    user_id: payload.id
+                    userId: payload.id
                 });
                 setAddedTeam([response.data, ...addedComment]);
                 setForm({ team_name: "", user_id: payload.id });
