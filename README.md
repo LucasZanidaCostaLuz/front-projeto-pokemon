@@ -1,8 +1,8 @@
-# Projeto Pokémon Clone
+# Projeto Pokémon
 
 ## Descrição do Projeto
 
-Este projeto é um clone de uma aplicação Pokémon, desenvolvido como parte de um desafio técnico para a empresa XPTO. O objetivo é demonstrar conhecimentos em Next.js, React e outras tecnologias modernas, criando uma aplicação web interativa para exibir informações sobre Pokémon.
+Este projeto é um clone de uma aplicação Pokémon, desenvolvido como parte de um desafio técnico para o SENAI. O objetivo é demonstrar conhecimentos em Next.js, React e outras tecnologias modernas, criando uma aplicação web interativa para exibir informações sobre Pokémon.
 
 ### Funcionalidades
 
